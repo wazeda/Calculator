@@ -51,6 +51,7 @@ button{
                 5px 5px 12px rgb(0, 0, 0,0.14);
     border-radius: 30px;
     margin: 8px, auto;
+    color: #fff;
 }
 .equal{
     width: 118px;
@@ -64,4 +65,5 @@ button{
 }
 button:hover{
     background: #596275;
+
 }
