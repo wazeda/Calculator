@@ -11,8 +11,11 @@ function calculate() {
     final_number = final_number.replace(/(\d+)\s*\+\s*(\d+)%/g, (match,num, percent) => {
         return Number(num) + (Number(num) * Number(percent) / 100);
     });
-    final_number = final_number.replace(/(\d+)\s*\-\s*(\d+)%/g, (match,num, percnt) =>{
-        return Number(num) - (Number(num) * Number(percent)/ 100);
+    final_number = final_number.replace(/(\d+)\s*\-\s*(\d+)%/g, (match, num, percent) => {
+        return Number(num) - (Number(num) * Number(percent) / 100);
+        
+    // final_number = final_number.replace(/(\d+)\s*\-\s*(\d+)%/g, (match,num, percnt) =>{
+    //     return Number(num) - (Number(num) * Number(percent)/ 100);
     });
     final_number = final_number.replace(/%/g, '/100');
     const final_result = new Function(`return ${final_number}`)();
@@ -32,3 +35,4 @@ function clrs() {
 function dle() {
     result.value = result.value.slice(0, -1);
 }
+
